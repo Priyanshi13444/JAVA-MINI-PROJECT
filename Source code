@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+
+        int mynumber=(int)(Math.random()*100);    //Explicit type Casting
+        int usernumber=0;
+
+        do{
+            System.out.println("Enter any gussed number (1-100):");
+            usernumber=sc.nextInt();
+
+            if(usernumber==mynumber){
+                System.out.println("YEAHHHHH.....Congratulations you gussed the number Correctly.");
+                break;
+            }
+
+            else if(usernumber > mynumber){
+                System.out.println("Your number is too large!");
+                System.out.println();
+            }
+
+            else if(usernumber < mynumber){
+                System.out.println("Your number is too small!");
+                System.out.println();
+            }
+
+        }while(usernumber >= 0);
+
+        System.out.println();
+
+        System.out.println("MY NUMBER WAS: "+ mynumber);
+    }
+}
